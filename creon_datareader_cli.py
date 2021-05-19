@@ -72,7 +72,7 @@ class CreonDatareaderCLI:
             # column개수로 ohlcv_only 여부 확인
             cursor.execute('SELECT * FROM {}'.format(db_code_list[0]))
             column_names = [description[0] for description in cursor.description]
-            if len(column_names) > 6:  # date, o, h, l, c, v
+            if len(column_names) > 7:  # date, o, h, l, c, v
                 ohlcv_only = False
             else:
                 ohlcv_only = True
