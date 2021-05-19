@@ -165,7 +165,7 @@
       </rect>
      </property>
      <property name="text">
-      <string>./db/stock_price(5min).db</string>
+      <string>./db/stock_price.db</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_5">

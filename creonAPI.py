@@ -1,4 +1,3 @@
-# coding=utf-8
 import win32com.client
 import time
 from typing import TYPE_CHECKING
@@ -57,8 +56,8 @@ class CpStockChart:
         self.objStockChart.SetInputValue(4, count)  # 최근 count개
 
         if ohlcv_only:
-            self.objStockChart.SetInputValue(5, [0, 2, 3, 4, 5, 8])  # 요청항목 - 날짜,시가,고가,저가,종가,거래량
-            rq_column = ('date', 'open', 'high', 'low', 'close', 'volume')
+            self.objStockChart.SetInputValue(5, [0, 2, 3, 4, 5, 8, 19])  # 요청항목 - 날짜,시가,고가,저가,종가,거래량, modification rate
+            rq_column = ('date', 'open', 'high', 'low', 'close', 'volume', 'modification_rate')
         else:
             # 요청항목
             self.objStockChart.SetInputValue(5, [0, # 날짜
@@ -158,7 +157,7 @@ class CpStockChart:
 
         self.objStockChart.SetInputValue(6, dwm)  # '차트 주기 - 분/틱
         self.objStockChart.SetInputValue(7, tick_range)  # 분틱차트 주기
-        self.objStockChart.SetInputValue(9, ord('1'))  # 수정주가 사용
+        self.objStockChart.SetInputValue(9, ord('0'))  # 수정주가 사용x
 
         rcv_data = {}
         for col in rq_column:

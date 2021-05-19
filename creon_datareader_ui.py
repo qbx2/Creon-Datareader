@@ -124,7 +124,7 @@ class Ui_MainWindow(object):
         self.pushButton_3.setText(_translate("MainWindow", "검색 결과만\n"
 "다운로드"))
         self.label_9.setText(_translate("MainWindow", "DB 경로"))
-        self.lineEdit_4.setText(_translate("MainWindow", "./db/stock_price(5min).db"))
+        self.lineEdit_4.setText(_translate("MainWindow", "./db/stock_price.db"))
         self.lineEdit_5.setPlaceholderText(_translate("MainWindow", "종목코드 or 종목명"))
         self.label_12.setText(_translate("MainWindow", "종목 필터"))
         self.pushButton_2.setText(_translate("MainWindow", "연결"))

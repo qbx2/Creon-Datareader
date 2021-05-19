@@ -233,7 +233,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
             count = 500
 
         if self.checkBox.isChecked():
-            columns=['open', 'high', 'low', 'close', 'volume']
+            if tick_unit == '분봉':
+                columns=['open', 'high', 'low', 'close', 'volume']
+            else:
+                columns=['open', 'high', 'low', 'close', 'volume', 'modification_rate']
             ohlcv_only = True
         else:
             columns=['open', 'high', 'low', 'close', 'volume',
